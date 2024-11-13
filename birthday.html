@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đi Xem Phim Với Tui!</title>
+    <style>
+        body {
+            /* Đảm bảo đường dẫn đúng và ảnh đủ lớn */
+            background-image: url('/img/04_Hue_masthead.png'); /* Đảm bảo đường dẫn đúng */
+            background-size: cover; /* Phủ kín toàn bộ màn hình */
+            background-position: center; /* Căn giữa ảnh */
+            background-attachment: fixed; /* Ảnh cố định khi cuộn trang */
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .movie-invite {
+            text-align: center;
+            color: white; /* Đảm bảo chữ rõ ràng trên nền ảnh */
+        }
+        .movie-invite h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .movie-images {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .movie-images img {
+            width: 250px; /* Kích thước mặc định của ảnh */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, width 0.3s, height 0.3s;
+            cursor: pointer;
+        }
+        .movie-images img:hover {
+            transform: scale(1.1); /* Phóng to khi di chuột */
+            width: 270px; /* Thay đổi kích thước khi hover */
+            height: auto; /* Giữ tỷ lệ ảnh */
+        }
+        /* Định dạng cho nút "Chắc chắn là cả 2" */
+        .confirm-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .confirm-button:hover {
+            background-color: #ff3b61;
+            transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+        }
+        .confirm-button i {
+            margin-right: 10px; /* Khoảng cách giữa biểu tượng và chữ */
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-invite">
+        <h1>Đi Xem Phim Nào Đâyyyy</h1>
+        <p>Ngại chíttttt thoyyyy</p>
+        <div class="movie-images">
+            <!-- Hình ảnh phim 1 -->
+            <img src="https://afamilycdn.com/150157425591193600/2024/10/18/3-17292513079051476704763-1729253431807-1729253431915834611841.jpg" alt="Phim 1">
+            <!-- Hình ảnh phim 2 -->
+            <img src="https://newsmd2fr.keeng.vn/tiin/archive/imageslead/2024/10/29/90_6c5c8bde069e80a0e24e4ae4c2eac172.jpg" alt="Phim 2">
+        </div>
+        <!-- Nút "Chắc chắn là cả 2" -->
+        <button class="confirm-button" id="confirmButton">
+            <i class="fa fa-check-circle"></i> Chắc chắn là cả 2
+        </button>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        document.getElementById('confirmButton').addEventListener('click', function() {
+            window.location.href = "congratulations.html";
+        });
+    </script>
+</body>
+</html>

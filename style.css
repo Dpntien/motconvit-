@@ -1,0 +1,210 @@
+/* Đặt lại các thuộc tính cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffebee, #ffe0f0);
+}
+
+/* Hiệu ứng trái tim đập */
+.heart-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Tạo hình trái tim */
+.heart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #ff6b81;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #ff6b81;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -150px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 150px;
+}
+
+/* Hiệu ứng chữ nhấp nháy */
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    animation: text-flicker 1.5s infinite;
+}
+
+@keyframes text-flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.text h1 {
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text p {
+    font-size: 18px;
+}
+
+/* Hiệu ứng bánh sinh nhật nổi lên */
+.cake-container {
+    margin-top: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.birthday-cake {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.birthday-cake:hover {
+    transform: scale(1.1);
+}
+
+/* Câu hỏi và các nút lựa chọn */
+.question-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.question-container h2 {
+    font-size: 24px;
+    color: #ff6b81;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.yes-btn {
+    background-color: #ff6b81;
+    color: white;
+}
+
+.no-btn {
+    background-color: #bbb;
+    color: white;
+    position: relative;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Đặt lại các thuộc tính cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #cce7ff, #f5faff);
+}
+
+/* Câu hỏi mời đi xem phim */
+.movie-invite {
+    text-align: center;
+    color: #ff6b81;
+}
+
+.movie-invite h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Các hình ảnh phim */
+.movie-images {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Đặt kích thước mặc định và hiệu ứng thay đổi khi hover */
+.movie-images img {
+    width: 250px; /* Kích thước mặc định của ảnh */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+    cursor: pointer; /* Thêm con trỏ chuột cho ảnh */
+}
+
+/* Khi di chuột vào ảnh, kích thước sẽ thay đổi */
+.movie-images img:hover {
+    transform: scale(1.1); /* Phóng to khi di chuột */
+    width: 270px; /* Thay đổi kích thước khi hover */
+    height: auto; /* Giữ tỷ lệ ảnh */
+}

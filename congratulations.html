@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật!</title>
+    <style>
+        body {
+            background-image: url('/img/tienduong.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .congratulations {
+            text-align: center;
+            color: pink;
+        }
+        .congratulations h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .confirm-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff6b81;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .confirm-button:hover {
+            background-color: #ff3b61;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Thêm thẻ audio để phát nhạc nền tự động khi vào trang congratulations.html -->
+    <audio id="background-music" autoplay loop>
+        <source src="/sound/yeuem.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="congratulations">
+        <h1>Chúc Mừng Sinh Nhật!</h1>
+        <p>Chúc bạn một ngày tuyệt vời, đầy niềm vui và hạnh phúc!</p>
+        <button class="confirm-button" onclick="window.location.href='index.html'">Happy Birthday ^^</button>
+    </div>
+
+    <script>
+        // Nếu bạn muốn thêm một hiệu ứng hoặc tự động làm gì đó, có thể thêm mã JS ở đây
+    </script>
+</body>
+</html>
